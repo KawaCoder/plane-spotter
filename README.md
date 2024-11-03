@@ -32,8 +32,7 @@ To check for planes visible in the sky at the coordinates for Paris, France:
 - Bash shell
 - jq ([informations here](https://packages.debian.org/bookworm/jq))
 - `curl` command-line tool (for making API requests)
-- Access to the OpenSky API and Open-Meteo API
-
+- Internet access
 ## Installation
 
 1. Clone the repository:
