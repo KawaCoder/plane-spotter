@@ -73,7 +73,7 @@ calculate_delta_latitude() {
 weather_data=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=${LATITUDE}&longitude=${LONGITUDE}&hourly=cloud_cover,cloud_cover_low,cloud_cover_mid,cloud_cover_high,visibility")
 
 # Parse weather data
-visibility=$(echo "$weather_data" | jq -r .hourly.visibility[$VALUE_INDEX])
+visibility=$(echo "$weather_data" | jq -r ".hourly.visibility[$VALUE_INDEX] | tonumber")
 high_limit="$visibility"
 low_limit=500
 cloud_cover=$(echo "$weather_data" | jq -r .hourly.cloud_cover[$VALUE_INDEX])
