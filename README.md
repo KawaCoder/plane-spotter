@@ -38,13 +38,13 @@ To check for planes visible in the sky at the coordinates for Paris, France:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/plane_spotter.git
+   git clone https://github.com/KawaCoder/plane_spotter.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd plane_spotter
+   cd plane-spotter
    ```
 
 3. Make the script executable:
