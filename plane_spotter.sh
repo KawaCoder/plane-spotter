@@ -91,8 +91,8 @@ echo " --> Current cloud coverage 3-8km:    ${cloud_cover_mid}%"
 echo -e " --> Current cloud coverage >8km:     ${cloud_cover_high}%\n"
 
 # Adjust high altitude limit based on cloud cover
-visibility=$(( visibility/1000 ))
-visibility_neg=$(( -visibility ))
+visibility=$(echo "scale=0; $visibility/1000" | bc)
+visibility_neg=$(echo "-$visibility" | bc)
 if [[ $cloud_cover -gt 50 ]]; then
     echo -e "\033[0;31m /!\\ \033[0m Poor visibility. Setting high altitude limit:"
     if [[ $cloud_cover_low -gt 50 ]]; then
